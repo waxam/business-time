@@ -12,6 +12,8 @@
 <business-time></business-time>
 ```
 
+![screenshot.png](screenshot.png)
+
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/LRNWebComponents/business-time)
 
 # \<business-time\>
