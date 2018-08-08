@@ -2,6 +2,8 @@
 <link rel="import" href="../materializecss-styles/materializecss-styles.html">
 <link rel="import" href="../hax-body-behaviors/hax-body-behaviors.html">
 <link rel="import" href="../schema-behaviors/schema-behaviors.html">
+<link rel="import" href="business-time-banner.html">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 <!--
 `business-time`
 A LRN element
@@ -19,9 +21,19 @@ A LRN element
     <style>
       :host {
         display: block;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      h2 {
       }
     </style>
-    <h2>[[title]]</h2>
+    <business-time-banner>
+      <h1 slot="title">It's Business Time</h1>
+      <h2 slot="secondary">bringing you a great business model for a new generation</h2>
+      <p>Learn more about our business [button here]</p>
+    </business-time-banner>
   </template>
   <script>
     Polymer({
