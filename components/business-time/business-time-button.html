@@ -1,0 +1,93 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="business-time-button">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      .btn-wrapper {
+        width: 290px;
+        height: 110px;
+        position: relative;
+        display: block;
+      }
+
+      .btn-wrapper:focus .btn-inner,
+      .btn-wrapper:hover .btn-inner {
+        top: -4px;
+        transform: scale(1, 1);
+        cursor: pointer;
+      }
+
+      .btn-wrapper__container {
+        border-bottom: 2px solid #15B5E2;
+        position: absolute;
+        width: 100%;
+        height: 80px;
+      }
+
+      .btn-wrapper__container:before,
+      .btn-wrapper__container:after {
+        border-bottom: 2px solid #15B5E2;
+        width: 96%;
+        left: 2%;
+        bottom: -8px;
+        content: "";
+        position: absolute;
+      }
+
+      .btn-wrapper__container:after {
+        width: 92%;
+        left: 4%;
+        bottom: -14px;
+      }
+
+      .btn-wrapper__container .btn-inner {
+        width: 104.2%;
+        height: 100%;
+        position: absolute;
+        top: 20px;
+        left: -2.1%;
+        border: 2px solid #15B5E2;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Source Code Pro', monospace;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 18px;
+        background: #2C3E50;
+        transform: scale(0.96, 0.96);
+        transition: all .3s;
+        z-index: 4;
+      }
+
+      .btn-wrapper__container .btn-inner__text {
+        text-decoration: none;
+        color: #15B5E2;
+      }
+    </style>
+
+    <a class="btn-wrapper" href="[[url]]">
+      <div class="btn-wrapper__container">
+        <div class="btn-inner">
+          <div class="btn-inner__text"><slot></slot></div>
+        </div>
+      </div>
+    </a>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'business-time-button',
+      properties: {
+        url: {
+          type: String
+        }
+      }
+    });
+  </script>
+</dom-module>
